@@ -17,8 +17,9 @@ public class HomePage extends BasePage {
 
 	}
 	
-	public void signIn() {
-		waitForElementToBeVisible(signbtn);
+	public SignInPage signIn() {
+		waitForElementToBeVisible(signbtn).click();
+		return new SignInPage(driver);
 	}
 
 }

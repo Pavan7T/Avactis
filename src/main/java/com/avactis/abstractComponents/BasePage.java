@@ -29,8 +29,9 @@ public class BasePage {
 	}
 
 	// Wait Methods
-	public void waitForElementToBeVisible(WebElement element) {
+	public WebElement waitForElementToBeVisible(WebElement element) {
 		waitUtil.visibilityOf(element);
+		return element;
 	}
 
 	public void waitForElementToBeClickable(WebElement element) {

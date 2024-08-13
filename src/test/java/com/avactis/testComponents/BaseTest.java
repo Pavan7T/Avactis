@@ -1,5 +1,6 @@
 package com.avactis.testComponents;
 
+import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,6 +22,7 @@ import java.util.logging.Logger;
 
 public class BaseTest {
 	protected WebDriver driver;
+	protected Logger log;
 	// private static final Logger logger =
 	// Logger.getLogger(BaseTest.class.getName());
 
@@ -29,8 +31,14 @@ public class BaseTest {
 	public void setUp() {
 
 		initializeDriver(Constants.BROWSER);
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Constants.TIMEOUT));
+		// driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Constants.TIMEOUT));
+		DOMConfigurator.configure(System.getProperty("user.dir") + "//src//test//resources//log4j.xml");
+		// DOMConfigurator.configure("test/resources/log4j/log4j-alternate.xml");
+		log = Logger.getLogger(BaseTest.class.getName());
+		log.info("Driver Launch successfully");
+
 		driver.manage().window().maximize();
+
 	}
 
 	private void initializeDriver(String browser) {
@@ -51,9 +59,8 @@ public class BaseTest {
 
 	@AfterMethod
 	public void tearDown() {
-		if (driver != null) {
-			driver.quit();
-		}
+		driver.quit();
+
 	}
 
 	/*

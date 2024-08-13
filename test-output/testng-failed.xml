@@ -7,8 +7,6 @@
         <methods>
           <include name="userlogin"/>
           <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="userlogOut"/>
         </methods>
       </class> <!-- com.avactis.test.UserLoginTest -->
     </classes>
