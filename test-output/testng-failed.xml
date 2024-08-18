@@ -5,8 +5,8 @@
     <classes>
       <class name="com.avactis.test.UserLoginTest">
         <methods>
-          <include name="userlogin"/>
           <include name="setUp"/>
+          <include name="TC1"/>
         </methods>
       </class> <!-- com.avactis.test.UserLoginTest -->
     </classes>

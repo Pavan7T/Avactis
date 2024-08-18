@@ -57,7 +57,7 @@ public class BaseTest {
 		driver.get(Constants.BASE_URL);
 	}
 
-	@AfterMethod
+	//@AfterMethod
 	public void tearDown() {
 		driver.quit();
 

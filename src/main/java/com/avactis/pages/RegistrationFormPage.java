@@ -55,30 +55,56 @@ public class RegistrationFormPage extends BasePage {
 	private WebElement Register;
 
 	@FindBy(xpath = "//div[text()='Account created successfully. You are now registered.']")
-	private WebElement AccVerification;
+	private WebElement newAccVerification;
+	
+	@FindBy(xpath = "//div[text()='This account name is already taken. Please choose a different account name.']")
+	private WebElement oldAccVerification;
+	
+	
 
 	public RegistrationFormPage(WebDriver driver) {
 		super(driver);
 	}
 
 	public String registrationAction() {
-		enterText(Email, Constants.generateUniqueEmail());
-		enterText(Password, Constants.Reg_Password);
-		enterText(RePassword, Constants.Reg_RePassword);
-		enterText(FirstName, Constants.FirstName);
-		enterText(LastName, Constants.LastName);
+		enterText(Email, Constants.EMAIL);
+		enterText(Password, Constants.REG_PASSWORD);
+		enterText(RePassword, Constants.REG_REPASSWORD);
+		enterText(FirstName, Constants.FIRSTNAME);
+		enterText(LastName, Constants.LASTNAME);
 		waitForElementToBeVisible(Country);
 		clickElement(INDCountry);
 		waitForElementToBeVisible(State);
 		clickElement(MHState);
-		enterText(ZipCode, Constants.ZipCode);
-		enterText(City, Constants.City);
-		enterText(Streetline1, Constants.Streetline1);
-		enterText(Streetline2, Constants.Streetline2);
-		enterText(Phone, Constants.Phone);
+		enterText(ZipCode, Constants.ZIPCODE);
+		enterText(City, Constants.CITY);
+		enterText(Streetline1, Constants.STREETLINE1);
+		enterText(Streetline2, Constants.STREETLINE2);
+		enterText(Phone, Constants.PHONE);
 		clickElement(Register);
-		waitForElementToBeVisible(AccVerification);
-		String ActualText = getElementText(AccVerification);
+		waitForElementToBeVisible(newAccVerification);
+		String ActualText = getElementText(newAccVerification);
+		return ActualText;
+	}
+	
+	public String alreadyAccountRegistrationAction() {
+		enterText(Email, Constants.EMAIL);
+		enterText(Password, Constants.REG_PASSWORD);
+		enterText(RePassword, Constants.REG_REPASSWORD);
+		enterText(FirstName, Constants.FIRSTNAME);
+		enterText(LastName, Constants.LASTNAME);
+		waitForElementToBeVisible(Country);
+		clickElement(INDCountry);
+		waitForElementToBeVisible(State);
+		clickElement(MHState);
+		enterText(ZipCode, Constants.ZIPCODE);
+		enterText(City, Constants.CITY);
+		enterText(Streetline1, Constants.STREETLINE1);
+		enterText(Streetline2, Constants.STREETLINE2);
+		enterText(Phone, Constants.PHONE);
+		clickElement(Register);
+		waitForElementToBeVisible(oldAccVerification);
+		String ActualText = getElementText(oldAccVerification);
 		return ActualText;
 	}
 
