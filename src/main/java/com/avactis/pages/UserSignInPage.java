@@ -20,6 +20,15 @@ public class UserSignInPage extends BasePage {
 	@FindBy(className = "orders_search1")
 	private WebElement orderHeading;
 
+	@FindBy(className = "orders_search1")
+	private WebElement category;
+
+	String navlink1 = "//div[@class='header-navigation']//a[contains(text(),'";
+	String navlink2 = "')]";
+
+	String productlink1 = "//h3[text()='";
+	String productlink2 = "']";
+
 	public UserSignInPage(WebDriver driver) {
 		super(driver);
 
@@ -31,6 +40,23 @@ public class UserSignInPage extends BasePage {
 		return actualText;
 
 		// return cartLogo;
+	}
+
+	public void selectCategory(String category) {
+		// Locate and click on the category based on the provided name
+		if (category.equals("Computers")) {
+			
+		} else if (category.equals("DVD")) {
+
+		} else {
+			driver.findElement(By.xpath(navlink1 + category + navlink2)).click();
+		}
+	}
+
+	public void selectProduct(String productName) {
+		// Locate and click on the product based on the provided name
+		driver.findElement(By.xpath(productlink1 + productName + productlink2)).click();
+
 	}
 
 }
