@@ -1,57 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-18T18:09:42 IST" name="Default suite" finished-at="2024-08-18T18:10:14 IST" duration-ms="31544">
+  <suite started-at="2024-08-21T20:25:48 IST" name="Suite" finished-at="2024-08-21T20:26:57 IST" duration-ms="69308">
     <groups>
     </groups>
-    <test started-at="2024-08-18T18:09:42 IST" name="Default test" finished-at="2024-08-18T18:10:14 IST" duration-ms="31544">
-      <class name="com.avactis.test.Store_testcases">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avactis.test.Store_testcases@14cd1699]" started-at="2024-08-18T18:09:42 IST" name="setUp" finished-at="2024-08-18T18:09:56 IST" duration-ms="13631" status="PASS">
+    <test started-at="2024-08-21T20:25:48 IST" name="Test" finished-at="2024-08-21T20:26:57 IST" duration-ms="69308">
+      <class name="com.avactis.test.UserLoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avactis.test.UserLoginTest@210ab13f]" started-at="2024-08-21T20:25:48 IST" name="setUp" finished-at="2024-08-21T20:25:57 IST" duration-ms="9364" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC05()[pri:0, instance:com.avactis.test.Store_testcases@14cd1699]" started-at="2024-08-18T18:09:56 IST" name="TC05" finished-at="2024-08-18T18:10:14 IST" duration-ms="17785" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method signature="TC1()[pri:0, instance:com.avactis.test.UserLoginTest@210ab13f]" started-at="2024-08-21T20:25:58 IST" name="TC1" finished-at="2024-08-21T20:26:21 IST" duration-ms="23602" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//h3[text()='Asus Eee PC Touch']"}
-  (Session info: chrome=127.0.6533.101)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.23.0', revision: '4df0a231af'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [703377e03bed9d3c60064315a437c59a, findElement {using=xpath, value=//h3[text()='Asus Eee PC Touch']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.101, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54305}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54305/devtoo..., se:cdpVersion: 127.0.6533.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 703377e03bed9d3c60064315a437c59a]]>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[text()='Account created successfully. You are now registered.']' (tried for 10 second(s) with 500 milliseconds interval)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//h3[text()='Asus Eee PC Touch']"}
-  (Session info: chrome=127.0.6533.101)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.23.0', revision: '4df0a231af'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [703377e03bed9d3c60064315a437c59a, findElement {using=xpath, value=//h3[text()='Asus Eee PC Touch']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.101, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54305}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54305/devtoo..., se:cdpVersion: 127.0.6533.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 703377e03bed9d3c60064315a437c59a
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
-at com.avactis.pages.UserSignInPage.selectProduct(UserSignInPage.java:52)
-at com.avactis.test.Store_testcases.TC05(Store_testcases.java:26)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[text()='Account created successfully. You are now registered.']' (tried for 10 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at com.avactis.utils.WaitUtils.visibilityOf(WaitUtils.java:95)
+at com.avactis.abstractComponents.BasePage.waitForElementToBeVisible(BasePage.java:33)
+at com.avactis.pages.RegistrationFormPage.registrationAction(RegistrationFormPage.java:85)
+at com.avactis.test.UserLoginTest.TC1(UserLoginTest.java:19)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -80,13 +52,61 @@ at org.testng.TestNG.run(TestNG.java:1079)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[text()='Account created successfully. You are now registered.']"}
+  (Session info: chrome=127.0.6533.120)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8d73106c64e2b3d96884ff3f85f105c9, findElement {value=//div[text()='Account created successfully. You are now registered.'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.120, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49406}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49406/devtoo..., se:cdpVersion: 127.0.6533.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8d73106c64e2b3d96884ff3f85f105c9
+at jdk.internal.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy16.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+... 32 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC05 -->
-      </class> <!-- com.avactis.test.Store_testcases -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- TC1 -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avactis.test.UserLoginTest@210ab13f]" started-at="2024-08-21T20:26:21 IST" name="setUp" finished-at="2024-08-21T20:26:28 IST" duration-ms="7203" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TC2()[pri:0, instance:com.avactis.test.UserLoginTest@210ab13f]" started-at="2024-08-21T20:26:28 IST" name="TC2" finished-at="2024-08-21T20:26:41 IST" duration-ms="12390" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC2 -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avactis.test.UserLoginTest@210ab13f]" started-at="2024-08-21T20:26:41 IST" name="setUp" finished-at="2024-08-21T20:26:47 IST" duration-ms="6093" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TC3()[pri:0, instance:com.avactis.test.UserLoginTest@210ab13f]" started-at="2024-08-21T20:26:47 IST" name="TC3" finished-at="2024-08-21T20:26:57 IST" duration-ms="10359" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC3 -->
+      </class> <!-- com.avactis.test.UserLoginTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
